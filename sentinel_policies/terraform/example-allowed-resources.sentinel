@@ -1,0 +1,37 @@
+# This policy uses the tfconfig/v2 import to allow specified resources
+
+# Import common-functions/tfconfig-functions/tfconfig-functions.sentinel
+# with alias "config"
+import "tfconfig-functions" as config
+
+# List of whitelisted resources
+allowed = ["vault_namespace",
+	"vault_token",
+	"vault_policy",
+	"vault_mount",
+	"vault_pki_secret_backend_intermediate_cert_request",
+	"vault_pki_secret_backend_root_sign_intermediate",
+	"vault_pki_secret_backend_config_urls",
+	"vault_pki_secret_backend_role",
+	"vault_pki_secret_backend_root_cert",
+	"vault_transit_secret_backend_key",
+	"vault_pki_secret_backend_intermediate_set_signed",
+	"github_repository",
+	"vault_github_auth_backend",
+	"tfe_workspace", "tfe_variable"]
+
+# Get all Resources
+allResources = config.find_all_resources()
+
+# Filter to resources with violations
+# Warnings will be printed for all violations since the last parameter is true
+violatingResources = config.filter_attribute_not_in_list(allResources,
+	"type", allowed, false)
+
+# Print any violations
+config.print_violations(violatingResources["messages"], "Resource not in allowedlist:")
+
+# Main rule
+main = rule {
+	length(violatingResources["messages"]) is 0
+}
