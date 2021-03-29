@@ -23,7 +23,7 @@ resource "vault_terraform_cloud_secret_backend" "default" {
 
 data "vault_policy_document" "default" {
   rule {
-    path         = "${local.secret_type}/creds/{{identity.entity.metadata.env}}-{{identity.entity.metadata.service}}"
+    path         = "${local.secret_type}/creds/{{identity.entity.metadata.application}}"
     capabilities = ["read"]
     description  = "Allow generation of tfc tokens, the end path name is the role name"
   }
@@ -64,5 +64,6 @@ resource "vault_identity_entity" "default" {
   metadata = {
     env     = "dev"
     service = "example"
+    application = "application"
   }
 }
