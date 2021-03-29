@@ -1,5 +1,5 @@
 locals {
-  application_name = "terraform-modules-development-tfc"
+  application_name = "terraform-vault-secrets-tfc"
   env              = "dev"
   service          = "web"
 }

@@ -16,8 +16,8 @@ title "Vault Integration Test"
 
 control "vlt-1.0" do
   impact 0.7
-  title "Test access to GCP secret"
-  desc "Test access to GCP secret"
+  title "Validate access to TFC Token"
+  desc "Validate access to TFC Token"
   describe http("#{url}/v1/#{namespace}#{path}",
               method: 'GET',
               headers: {'X-Vault-Token' => "#{token}"}) do
