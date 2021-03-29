@@ -7,9 +7,9 @@ output "url" {
 }
 
 output "namespace" {
-  value = "admin/terraform-vault-secrets-something/"
+  value = "admin/terraform-vault-secrets-tfc/"
 }
 
 output "path" {
-  value = "abritrary path"
+  value = format("terraform/creds/%s-%s", local.env, local.service)
 }
