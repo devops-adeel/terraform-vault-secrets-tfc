@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/compare/v0.1.0...v0.2.0) (2021-03-29)
+
+
+### Features
+
+* acl policy expects application-name as metadata ([fe1b6d4](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/commit/fe1b6d492e71916ff3491e3d1197f2d09c3746c4))
+
 ## 0.1.0 (2021-03-29)
 
 
