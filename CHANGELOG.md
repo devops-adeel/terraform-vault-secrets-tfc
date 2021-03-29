@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0 (2021-03-29)
+
+
+### Features
+
+* mvp tfc secrets module ([d825ef6](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/commit/d825ef6cab5208e2d526b1c7aba47bb1f291b4cc))
+
+
+### Bug Fixes
+
+* amended output to backend ([b9437e4](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/commit/b9437e46cf82ed834f677c7149621c642569f8cf))
+
 ## [0.2.0](https://www.github.com/devops-adeel/template-module-repo/compare/v0.1.0...v0.2.0) (2021-03-24)
 
 
