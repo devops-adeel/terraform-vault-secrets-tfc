@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/compare/v0.2.0...v0.3.0) (2021-03-31)
+
+
+### Features
+
+* - delegate member entity to auth module. - successful deny test. ([c0b17e6](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/commit/c0b17e60bb823954fab3f3f62bfdf60985090911))
+
 ## [0.2.0](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/compare/v0.1.0...v0.2.0) (2021-03-29)
 
 
