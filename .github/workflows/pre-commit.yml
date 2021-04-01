@@ -17,10 +17,14 @@ jobs:
         ruby-version: ${{ matrix.ruby }}
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    - uses: terraform-docs/gh-actions@v0.6.0
+    - uses: lablabs/setup-terraform-docs@v1
+      name: Setup Terraform docs
       with:
-        tf_docs_working_dir: .
-        # tf_docs_output_file: USAGE.md
-        # tf_docs_output_method: inject
-        tf_docs_git_push: 'false'
+        terraform_docs_version: latest
+    # - uses: terraform-docs/gh-actions@v0.6.0
+    #   with:
+    #     tf_docs_working_dir: .
+    #     # tf_docs_output_file: USAGE.md
+    #     # tf_docs_output_method: inject
+    #     tf_docs_git_push: 'false'
     - uses: pre-commit/action@v2.0.0
