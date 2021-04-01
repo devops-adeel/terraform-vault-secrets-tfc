@@ -17,13 +17,15 @@ module "vault_tfc_secrets" {
 
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 2.19.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| vault | ~> 2.19.0 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 2.19.0 |
 
 ## Modules
 
