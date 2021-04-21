@@ -3,9 +3,6 @@ terraform {
     vault = {
       source = "hashicorp/vault"
     }
-    tfe = {
-      version = "~> 0.24.0"
-    }
   }
   backend "remote" {
     organization = "hc-implementation-services"
@@ -16,21 +13,13 @@ terraform {
   }
 }
 
-variable "approle_id" {
-  description = "The Approle ID for this workspace"
-  type        = string
-  sensitive   = true
-}
-variable "approle_secret" {
-  description = "The Approle Secret for this workspace"
-  type        = string
-  sensitive   = true
-}
+variable "approle_id" {}
+variable "approle_secret" {}
 
 provider "vault" {
   auth_login {
     namespace = "admin/terraform-vault-secrets-tfc"
-    path      = "auth/approle/login"
+    path = "auth/approle/login"
 
     parameters = {
       role_id   = var.approle_id
