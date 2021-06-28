@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/compare/v0.3.0...v0.4.0) (2021-06-28)
+
+
+### Features
+
+* added admin policy ([4dec500](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/commit/4dec50071a182d82566aac0a480626587d71a7b3))
+* added admin policy for github team ([a0ec146](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/commit/a0ec1469d49866a7110fc6fcd029a6e0d76a38a3))
+
 ## [0.3.0](https://www.github.com/devops-adeel/terraform-vault-secrets-tfc/compare/v0.2.0...v0.3.0) (2021-03-31)
 
 
