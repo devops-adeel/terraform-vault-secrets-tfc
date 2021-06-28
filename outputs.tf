@@ -8,3 +8,8 @@ output "identity_group_id" {
   value       = vault_identity_group.default.id
   sensitive   = true
 }
+
+output "tfc_admin_policy_name" {
+  description = "Name of the terraform admin policy"
+  value       = vault_policy.admin.name
+}
