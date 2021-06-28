@@ -18,3 +18,9 @@ variable "email" {
   description = "TFC User Email Address"
   type        = string
 }
+
+variable "username" {
+  description = "Terraform username"
+  type        = string
+  default     = "devops-adeel"
+}
