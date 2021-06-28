@@ -52,3 +52,21 @@ resource "vault_identity_group_policies" "default" {
     vault_policy.default.name,
   ]
 }
+
+data "vault_policy_document" "admin" {
+  rule {
+    path         = "${local.secret_type}/creds/*"
+    capabilities = ["read"]
+    description  = "Allow generation of tfc tokens, the end path name is the role name"
+  }
+  rule {
+    path         = "auth/token/*"
+    capabilities = ["create", "read", "update", "delete", "list"]
+    description  = "create child tokens"
+  }
+}
+
+resource "vault_policy" "admin" {
+  name   = "${local.secret_type}-creds-admin"
+  policy = data.vault_policy_document.admin.hcl
+}
