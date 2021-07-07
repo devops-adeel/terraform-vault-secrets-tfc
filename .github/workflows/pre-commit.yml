@@ -1,0 +1,26 @@
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  # pre-commit:
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       ruby: [ '2.7' ]
+  #   steps:
+  #   - uses: actions/setup-ruby@v1
+  #     with:
+  #       ruby-version: ${{ matrix.ruby }}
+  #   - uses: actions/checkout@v2
+  #   - uses: actions/setup-python@v2
+  #   # - uses: terraform-docs/gh-actions@v0.6.0
+  #   #   with:
+  #   #     tf_docs_working_dir: .
+  #   #     # tf_docs_output_file: USAGE.md
+  #   #     # tf_docs_output_method: inject
+  #   #     tf_docs_git_push: 'false'
+  #   - uses: pre-commit/action@v2.0.0
